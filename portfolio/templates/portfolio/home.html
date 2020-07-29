@@ -1,5 +1,11 @@
 <h1>Claudio's Portfolio</h1>
 
+
+{% load static %}
+
+<a href="{% static 'portfolio/ClaudioLaasCV.pdf' %}">Resume</a> <br>
+<img src="{% static 'portfolio/ClaudioLaas.jpg' %}" height="50%"> 
+
 {% for project in projects %}
 
 <h2>{{ project.title }}</h2>
