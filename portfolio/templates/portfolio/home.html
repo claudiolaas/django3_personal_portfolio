@@ -1,10 +1,14 @@
-<h1>Claudio's Portfolio</h1>
+{% extends 'portfolio/base.html' %}
 
+{% block content %}
+
+<h1>Claudio's Portfolio</h1>
+<a href="{% url 'blog:all_blogs' %}">Blogs</a> <br>
 
 {% load static %}
 
 <a href="{% static 'portfolio/ClaudioLaasCV.pdf' %}">Resume</a> <br>
-<img src="{% static 'portfolio/ClaudioLaas.jpg' %}" height="50%"> 
+<img src="{% static 'portfolio/ClaudioLaas.jpg' %}" width="50%"> 
 
 {% for project in projects %}
 
@@ -19,3 +23,5 @@
 {% endif %}
 
 {% endfor %}
+
+{% endblock %}
