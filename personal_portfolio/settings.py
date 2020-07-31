@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&ds6-o4-y2p&g@x8p2m$0r4mx*lm69$s!**js+-1h2t!@2@i3b'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['claudiolaas.pythonanywhere.com']
 
 
 # Application definition
@@ -120,5 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL =  '/media/' 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL =  '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
